@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Kafka_Exam_01.MemoryService-f6160fc8-a11a-4acc-a9b4-0d5c56e6e728</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.5.3" />
+    <PackageReference Include="Manonero.EventBus.Kafka" Version="6.0.9" />
+    <PackageReference Include="Manonero.Logger.Kafka" Version="6.0.0-beta" />
+    <PackageReference Include="Manonero.MessageBus.Kafka" Version="6.0.0-beta.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+</Project>
