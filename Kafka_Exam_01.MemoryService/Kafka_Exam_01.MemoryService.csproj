@@ -12,6 +12,19 @@
     <PackageReference Include="Manonero.EventBus.Kafka" Version="6.0.9" />
     <PackageReference Include="Manonero.Logger.Kafka" Version="6.0.0-beta" />
     <PackageReference Include="Manonero.MessageBus.Kafka" Version="6.0.0-beta.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kafka_Exam_01.Infrastructure\Kafka_Exam_01.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

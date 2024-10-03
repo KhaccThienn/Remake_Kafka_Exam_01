@@ -6,7 +6,8 @@
         {
 
             services.AddDbContextServices(configuration)
-                .AddSingletonServices()
+                .AddSingletonMemoryServices()
+                .AddScopedServices()
                 .AddMiscellaneousServices();
             return services;
         }
@@ -21,11 +22,9 @@
             return services;
         }
 
-        public static IServiceCollection AddSingletonServices(this IServiceCollection services)
+        public static IServiceCollection AddScopedServices(this IServiceCollection services)
         {
-            services.AddSingleton<ProductMemory>();
-            services.AddSingleton<IProductService, ProductService>();
-            services.AddSingleton<IProductProducer, ProductProducer>();
+            services.AddScoped<IProductService, ProductService>();
 
             return services;
         }

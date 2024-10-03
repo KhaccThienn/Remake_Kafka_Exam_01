@@ -1,5 +1,9 @@
+
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
+
+// Load AppSettings
+var appSetting = AppConfiguration.LoadAppSettings(configuration);
 
 // Add services to the container.
 
@@ -9,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDerivateTradeServices(configuration);
+builder.Services.AddInfrastructureRegisterService(configuration, appSetting);
 
 var app = builder.Build();
 
