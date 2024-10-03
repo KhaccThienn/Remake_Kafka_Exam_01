@@ -1,7 +1,4 @@
-﻿
-using Kafka_Exam_01.Infrastructure.Extensions;
-
-namespace Kafka_Exam_01.MemoryService.Extensions
+﻿namespace Kafka_Exam_01.OracleService.Extensions
 {
     public static class ServiceCollectionExtensions
     {
@@ -10,7 +7,6 @@ namespace Kafka_Exam_01.MemoryService.Extensions
 
             services.AddDbContextServices(configuration)
                 .AddScopedServices()
-                .AddSingletonMemoryServices()
                 .AddCommandHandlers()
                 .AddMiscellaneousServices();
             return services;
@@ -50,7 +46,7 @@ namespace Kafka_Exam_01.MemoryService.Extensions
 
             services.AddKafkaConsumers(builder =>
             {
-                builder.AddConsumer<ProductConsumingTask>(appSetting.GetConsumerSetting("0"));
+                builder.AddConsumer<ProductPersistanceConsumingTask>(appSetting.GetConsumerSetting("1"));
             });
 
             return services;

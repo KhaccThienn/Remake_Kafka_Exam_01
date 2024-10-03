@@ -19,14 +19,11 @@ global using Kafka_Exam_01.Infrastructure.Requests;
 global using Kafka_Exam_01.Infrastructure.SeedDataAsync;
 global using Kafka_Exam_01.Infrastructure.Settings;
 
-global using Kafka_Exam_01.MemoryService.Commands;
-global using Kafka_Exam_01.MemoryService.Commands.Handlers;
-global using Kafka_Exam_01.MemoryService.Interfaces;
-global using Kafka_Exam_01.MemoryService.Interfaces.Commands;
-global using Kafka_Exam_01.MemoryService.IServices;
-global using Kafka_Exam_01.MemoryService.Services;
-
-global using Kafka_Exam_01.MemoryService.BackgroundTasks;
-
-global using Kafka_Exam_01.MemoryService;
-global using Kafka_Exam_01.MemoryService.Extensions;
+global using Kafka_Exam_01.OracleService;
+global using Kafka_Exam_01.OracleService.Extensions;
+global using Kafka_Exam_01.OracleService.BackgroundTasks;
+global using Kafka_Exam_01.OracleService.Commands;
+global using Kafka_Exam_01.OracleService.Commands.Handlers;
+global using Kafka_Exam_01.OracleService.IServices;
+global using Kafka_Exam_01.OracleService.Interfaces.Commands;
+global using Kafka_Exam_01.OracleService.Services;

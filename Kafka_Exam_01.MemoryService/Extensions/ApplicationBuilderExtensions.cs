@@ -2,13 +2,13 @@
 {
     public static class ApplicationBuilderExtensions
     {
-        //public static void LoadProductMemoryData(this IHost host)
-        //{
-        //    host.LoadDataToMemory<ProductMemory, ApplicationDbContext>((productInMe, dbContext) =>
-        //    {
-        //        new ProductMemorySeedAsync().SeedAsync(productInMe, dbContext).Wait();
-        //    });
-        //}
+        public static void LoadProductMemoryData(this IHost host)
+        {
+            host.LoadDataToMemory<ProductMemory, ApplicationDbContext>((productInMe, dbContext) =>
+            {
+                new ProductMemorySeedAsync().SeedAsync(productInMe, dbContext).Wait();
+            });
+        }
 
         public static void UseCustomKafkaMessageBus(this IHost host)
         {

@@ -14,4 +14,6 @@ var host = builder.Build();
 
 host.UseCustomKafkaMessageBus();
 
+host.LoadProductMemoryData();
+
 host.Run();
